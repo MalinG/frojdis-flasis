@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="513px" height="557px" viewBox="0 0 513 557" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <linearGradient x1="19.6830702%" y1="20.2014187%" x2="101.999998%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3F0091" offset="0%"></stop>
+            <stop stop-color="#FF007F" offset="100%"></stop>
+        </linearGradient>
+        <path d="M292.49326,278.067398 L379.374835,365.09886 L41.9267969,550.998063 C32.1328739,556.378189 23.14458,557.51751 15.9571042,555.080629 C6.00521468,551.662667 -0.42402189,541.424602 -0.42402189,525.869706 L-0.48720849,30.8347506 C-0.48720849,15.1057919 6.14738453,4.70948815 16.3994104,1.49723601 L292.49326,278.067398 Z M378.979919,191.368238 L292.49326,278.019926 L16.4152071,1.49723601 C23.5552929,-0.733934194 32.3698236,0.484506273 41.9267969,5.72221789 L378.979919,191.368238 Z M379.422225,365.09886 L292.49326,278.019926 L378.995716,191.368238 L494.485024,254.980325 C517.816676,267.845157 517.816676,288.827652 494.485024,301.724132 L379.422225,365.09886 Z" id="path-2"></path>
+    </defs>
+    <g id="Play-Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1024" transform="translate(-255.000000, -234.000000)">
+            <g id="Google-Play-Icon" transform="translate(256.000000, 234.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="Combined-Shape" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            </g>
+        </g>
+    </g>
+</svg>

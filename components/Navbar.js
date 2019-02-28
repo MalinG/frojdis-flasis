@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { colors } from '../theme'
 
 const Navbar = () => (
     <div>
@@ -11,10 +12,16 @@ const Navbar = () => (
             ul {
                 display: flex;
                 list-style: none;
+                margin-bottom: 24px;
+                
             }
 
             li {
                 margin-right: 15px;
+            }
+
+            a {
+                color: ${colors.pink}
             }
         `}
         </style>

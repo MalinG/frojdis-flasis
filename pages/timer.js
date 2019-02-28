@@ -1,10 +1,12 @@
 import { LayoutWrap } from '../components/Layout'
+import Timer from '../components/Timer'
 
 
-const Timer = () => (
+const TimerPage = () => (
     <div>
         <h1>Timer!!</h1>
+        <Timer />
     </div>        
 )
 
-export default LayoutWrap(Timer)
+export default LayoutWrap(TimerPage)

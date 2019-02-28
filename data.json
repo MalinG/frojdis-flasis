@@ -1,0 +1,110 @@
+{
+    "exercises" : [
+        {   
+            "id": 1,
+            "title": "Armhävningar",
+            "types": [
+                "core",
+                "överkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=WkRyOOQCVbo",
+            "equipment": false  
+        },
+        {   
+            "id": 2,
+            "title": "Kettlebell swing",
+            "types": [
+                "hela kroppen"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=GYHbu2LRqD0",
+            "equipment": true  
+        },
+        {   
+            "id": 3,
+            "title": "Hoppsquats",
+            "types": [
+                "underkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=Azl5tkCzDcc",
+            "equipment": false 
+        },
+        {   
+            "id": 4,
+            "title": "Triceps dips",
+            "types": [
+                "överkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=WkRyOOQCVbo",
+            "equipment": true  
+        },
+        {   
+            "id": 5,
+            "title": "Burpees",
+            "types": [
+                "hela kroppen"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=GYHbu2LRqD0"  
+        },
+        {   
+            "id": 6,
+            "title": "Utfallshopp",
+            "types": [
+                "underkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=Azl5tkCzDcc"  
+        },
+        {   
+            "id": 7,
+            "title": "Armhävningar",
+            "types": [
+                "core",
+                "överkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=WkRyOOQCVbo",
+            "equipment": false  
+        },
+        {   
+            "id": 8,
+            "title": "Kettlebell swing",
+            "types": [
+                "hela kroppen"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=GYHbu2LRqD0",
+            "equipment": true  
+        },
+        {   
+            "id": 9,
+            "title": "Hoppsquats",
+            "types": [
+                "underkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=Azl5tkCzDcc",
+            "equipment": false 
+        },
+        {   
+            "id": 10,
+            "title": "Triceps dips",
+            "types": [
+                "överkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=WkRyOOQCVbo",
+            "equipment": true  
+        },
+        {   
+            "id": 11,
+            "title": "Burpees",
+            "types": [
+                "hela kroppen"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=GYHbu2LRqD0"  
+        },
+        {   
+            "id": 12,
+            "title": "Utfallshopp",
+            "types": [
+                "underkropp"
+            ],
+            "videolink": "https://www.youtube.com/watch?v=Azl5tkCzDcc"  
+        }
+    ]
+}
