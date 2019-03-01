@@ -12,10 +12,11 @@ import { colors } from '../theme';
 class WorkoutPage extends Component {
   state = {
     selectedExercises: [],
+    sortedExercises: [],
     sets: 3,
     time: 45,
     rest: 15,
-    longRest: 45,
+    longRest: 60,
     showSettings: false
   }
 
@@ -32,14 +33,22 @@ class WorkoutPage extends Component {
     })
   }
 
+  handleUpdateSorting = (sortedExercises) => {
+    this.setState({
+      selectedExercises: sortedExercises
+    })
+  }
+
   handleStart = () => {
     ls.set('timer', {
+      reps: this.state.selectedExercises.length,
       sets: this.state.sets,
       time: this.state.time,
       rest: this.state.rest,
       longRest: this.state.longRest
     })
-    // Router.push('/go')
+    ls.set('exercises', this.state.selectedExercises)
+    Router.push('/go')
   }
 
   componentDidMount() {
@@ -51,7 +60,6 @@ class WorkoutPage extends Component {
   }
 
   render() {
-    console.log(this.state.selectedExercises)
     return (
       <div>
         <h1>Mitt träningspass</h1>
@@ -68,7 +76,7 @@ class WorkoutPage extends Component {
           toggleSettings={this.handleToggleSettings}
         />}
         {(this.state.selectedExercises.length > 0) && 
-          <DraggableList data={this.state.selectedExercises} />
+          <DraggableList onSort={this.handleUpdateSorting} data={this.state.selectedExercises} />
         }
 
         <style jsx>{`

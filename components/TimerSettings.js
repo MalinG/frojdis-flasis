@@ -8,7 +8,7 @@ const TimerSettings = ({
   rest, 
   longRest, 
   onInputChange,
-  toggleSettings
+  toggleSettings,
 }) => {
 
   return (
@@ -74,13 +74,10 @@ const TimerSettings = ({
           padding: 16px;
           background: ${colors.pink};
           border-radius: 4px;
-          display: flex;
-          flex-wrap: wrap;
         }
         
         .field {
-          flex: 1 0 50%;
-          margin: 4px 0;
+          margin: 8px 0;
         }
 
         input {
