@@ -19,13 +19,12 @@ class CreateWorkout extends Component {
   }
 
   handleUpdateSelection = (selection) => {
-    console.log(selection)
     this.setState({
       selection
     })
   }
 
-  handleStart = () => {
+  handleNext = () => {
     ls.set('selectedExercises', this.state.selection)
     Router.push('/workout')
   }
@@ -36,7 +35,7 @@ class CreateWorkout extends Component {
         <h1>Hur vill du träna idag?</h1>
         {!this.state.showFilter && <div className="header">
             <div onClick={this.handleToggleFilter} className="icon"></div>
-            <button onClick={this.handleStart}>Sätt igång!</button>
+            <button onClick={this.handleNext}>Nästa</button>
           </div>}
         <ExerciseList updateSelection={this.handleUpdateSelection} />
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ls from 'local-storage'
+import Router from 'next/router'
 
 import { LayoutWrap } from '../components/Layout'
 import DraggableList from '../components/DraggableList'
@@ -11,7 +12,10 @@ import { colors } from '../theme';
 class WorkoutPage extends Component {
   state = {
     selectedExercises: [],
-    sets: 4,
+    sets: 3,
+    time: 45,
+    rest: 15,
+    longRest: 45,
     showSettings: false
   }
 
@@ -28,6 +32,16 @@ class WorkoutPage extends Component {
     })
   }
 
+  handleStart = () => {
+    ls.set('timer', {
+      sets: this.state.sets,
+      time: this.state.time,
+      rest: this.state.rest,
+      longRest: this.state.longRest
+    })
+    // Router.push('/go')
+  }
+
   componentDidMount() {
     const selectedIds = ls.get('selectedExercises')
     const selectedExercises = exercises.filter(x => selectedIds.includes(x.id))
@@ -35,7 +49,9 @@ class WorkoutPage extends Component {
       selectedExercises
     })
   }
+
   render() {
+    console.log(this.state.selectedExercises)
     return (
       <div>
         <h1>Mitt träningspass</h1>
