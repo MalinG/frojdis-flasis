@@ -5,6 +5,7 @@ import { LayoutWrap } from '../components/Layout'
 import DraggableList from '../components/DraggableList'
 import TimerSettings from '../components/TimerSettings'
 import { exercises } from '../data.json'
+import { colors } from '../theme';
 
 
 class WorkoutPage extends Component {
@@ -38,7 +39,10 @@ class WorkoutPage extends Component {
     return (
       <div>
         <h1>Mitt träningspass</h1>
-        {!this.state.showSettings && <div onClick={this.handleToggleSettings} className="icon"></div>}
+        {!this.state.showSettings && <div className="header">
+          <div onClick={this.handleToggleSettings} className="icon"></div>
+          <button onClick={this.handleStart}>Sätt igång!</button>
+        </div>}
         {this.state.showSettings && <TimerSettings
           sets={this.state.sets}
           time={this.state.time}
@@ -52,11 +56,22 @@ class WorkoutPage extends Component {
         }
 
         <style jsx>{`
-          .icon {
+          h1 {
+            text-align: center;
+          }
+          .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             margin: 24px 0;
-            width: 50px;
-            height: 50px;
-            background: url('/static/svg/play.svg') no-repeat;
+          }
+          button {
+            background: ${colors.yellow};
+          }
+          .icon {
+            width: 32px;
+            height: 32px;
+            background: url('/static/svg/stopwatch.svg') no-repeat;
             background-size: contain;
           }
         `}</style>

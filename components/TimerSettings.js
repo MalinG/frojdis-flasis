@@ -13,7 +13,7 @@ const TimerSettings = ({
 
   return (
     <div className="wrapper">
-      <div className="close" onClick={toggleSettings}>X</div>
+      <div className="close" onClick={toggleSettings}></div>
       <div className="fields-wrapper">
         <div className="field">
           <label htmlFor="sets">Antal varv: </label>
@@ -63,7 +63,11 @@ const TimerSettings = ({
         .close {
           position: absolute;
           top: 8px;
-          right: 16px;
+          right: 8px;
+          width: 24px;
+          height: 24px;
+          background: url('/static/svg/close.svg') no-repeat;
+          background-size: contain;
         }
 
         .fields-wrapper {
@@ -86,7 +90,6 @@ const TimerSettings = ({
           color: white;
           font-size: 16px;
           font-weight: 600;
-          text-align: center;
         }
       `}</style>
     </div>

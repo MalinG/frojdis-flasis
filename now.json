@@ -1,5 +1,6 @@
 {
   "version": 2,
   "name": "flasis-app",
+  "alias": "flasis.now.sh",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }

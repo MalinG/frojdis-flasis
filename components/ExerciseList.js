@@ -14,12 +14,17 @@ export default class ExerciseList extends Component {
     if(this.itemIsSelected(id)) {
       this.setState({
         selected: this.state.selected.filter(x => x !== id)
+      }, () => {
+        this.props.updateSelection(this.state.selected)
       })
     } else {
       this.setState({
         selected: [...this.state.selected, id]
+      }, () => {
+        this.props.updateSelection(this.state.selected)
       })
     }
+    
   }
 
   handlePressNext = () => {
