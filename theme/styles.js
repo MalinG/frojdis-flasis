@@ -37,6 +37,7 @@ export const globalStyles = css.global`
     background-color: ${colors.grays[86]};
     color: white;
     font-family: sofia_pro;
+    font-size: 16px;
     box-sizing: border-box;
   }
 
@@ -66,5 +67,6 @@ export const globalStyles = css.global`
     font-family: sofia_pro;
     font-weight: bold;
     font-size: 16px;
+    cursor: pointer;
   }
 `

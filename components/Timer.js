@@ -3,8 +3,8 @@ import React, { Component } from 'react'
 // TODO: These setting will come from user input
 // TODO: Add styling
 const TIME = 3;
-const PAUSE = 2;
-const REST = 10;
+const REST = 2;
+const LONGREST = 10;
 const SETS = 2;
 const ROUNDS = 2;
 
@@ -12,18 +12,19 @@ let timer;
 
 export default class Timer extends Component {
   state = {
-    pauseTime: 2,
+    restTime: REST,
     currentTime: TIME,
     currentRound: 1,
     currentSet: 1,
     active: true,
     finished: false,
-    timerRunning: false
+    timerRunning: false,
+    pause: false
   }
 
   handleResetTimer = () => {
     this.setState({
-      pauseTime: 2,
+      restTime: 2,
       currentTime: TIME,
       currentRound: 1,
       currentSet: 1,
@@ -33,30 +34,35 @@ export default class Timer extends Component {
     })
   }
 
+  handlePause = () => {
+    this.setState({
+      pause: !this.state.pause
+    })
+  }
+
   handleClearTimer = () => {
     clearInterval(timer);
   }
 
   startTimer = () => {
     this.setState({ timerRunning: true })
-    // TODO: Add flag for last set on last round
-    // TODO: Remove last pause
     timer = setInterval(() => {
       const { currentRound, currentSet, currentTime, active } = this.state
 
-      if(this.state.finished) {
+      if(this.state.finished || this.state.pause) {
         return
       }
       if(currentTime > 0) {
-        console.log('ändra tid')
+        
         this.setState({ currentTime: currentTime -1})
       } else if (!this.state.finished){
         let setCount;
+        const restTime = currentSet === SETS ? LONGREST : REST
+        
         if(!active)
           setCount = this.state.currentSet 
-
         this.setState({
-          currentTime: active ? PAUSE : TIME,
+          currentTime: active ? restTime : TIME,
           currentRound: (setCount === SETS) ? currentRound + 1 : currentRound,
           currentSet: active ? currentSet : setCount === SETS ? 1 : currentSet + 1,
           active: !active,
@@ -76,6 +82,8 @@ export default class Timer extends Component {
     const activeRound = finished ? ROUNDS : currentRound
     const activeSet = finished ? SETS : currentSet
 
+    // TODO: Show as done after last execise, not last pause 
+
     return (
         <div>
           <div>
@@ -92,6 +100,7 @@ export default class Timer extends Component {
             <div>{currentTime}</div>
           </div>
           <button onClick={this.startTimer}>Starta</button>
+          <button onClick={this.handlePause}>Pausa</button>
           {finished && <button onClick={this.handleResetTimer}>Reset</button>}
         </div>
     )
