@@ -6,6 +6,7 @@ import { globalStyles } from '../theme/styles'
 const Layout = (props) => (
   <div className="wrapper">
     <Head>
+        <meta name="viewport" content="width=device-width" />
         <title>Fröjdis och flåsis</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
     </Head>
