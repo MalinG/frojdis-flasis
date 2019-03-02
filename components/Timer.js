@@ -41,7 +41,8 @@ class Timer extends Component {
       currentTime: time,
       timerRunning: false,
       exercises,
-      currentExercise: exercises[0].title
+      currentExercise: exercises[0].title,
+      finished: false
     })
   }
 

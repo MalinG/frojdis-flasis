@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="148px" height="187px" viewBox="0 0 148 187" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-3.000000, 1.000000)">
+            <g id="heart" transform="translate(46.000000, 68.000000)" fill="#FF007F">
+                <path d="M27.2111437,4.62524599 C24.3279875,1.78003512 20.4246701,0.0304581452 16.1290323,0.0304581452 C7.22122434,0.0304581452 0,7.55409742 0,16.8349521 C0,21.3028469 1.67357038,25.3634237 4.40313416,28.3735287 L4.39589443,28.3655084 L29,54 L53.6041056,28.3349547 C56.3264296,25.3329656 58,21.2722933 58,16.8044939 C58,7.52363928 50.7787757,0 41.8709677,0 C37.5754216,0 33.6720125,1.74957697 30.7815249,4.60204433 L30.7889479,4.59478785 L29.0000916,6.45855899 L27.2111437,4.62524599 Z" id="Path"></path>
+            </g>
+            <text id="Fröjdis" font-family="SofiaProBlack-Italic, Sofia Pro" font-size="48" font-style="italic" font-weight="700" fill="#FFF000">
+                <tspan x="0.236" y="34">Fröjdis</tspan>
+            </text>
+            <text id="Flåsis" font-family="SofiaProBlack-Italic, Sofia Pro" font-size="48" font-style="italic" font-weight="700" fill="#FFF000">
+                <tspan x="11.28" y="185">Flåsis</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
