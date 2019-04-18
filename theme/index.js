@@ -1,5 +1,8 @@
-import colors from './colors'
+import colors, { bgColor, buttonBg, themeLight } from './colors'
 
 export {
-  colors
+  colors,
+  buttonBg,
+  bgColor,
+  themeLight
 }

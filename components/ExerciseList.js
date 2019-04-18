@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ls from 'local-storage'
 import Router from 'next/router'
 
-import { exercises } from '../data.json'
+// import { exercises } from '../data.json'
 
 import { colors } from '../theme'
 
@@ -32,22 +32,22 @@ export default class ExerciseList extends Component {
   }
 
   render() {
-    const selected = this.state
+    const { exercises } = this.props
     
     return (
       <div>
         <ul>
           {
             exercises.map(item => {
-              const isSelected = this.itemIsSelected(item.id)
+              const isSelected = this.itemIsSelected(item._id)
               return (
-                <li key={item.id} className={isSelected ? 'selected' : null} onClick={() => this.handlePressItem(item.id)}>
+                <li key={item._id} className={isSelected ? 'selected' : null} onClick={() => this.handlePressItem(item._id)}>
                   <div className="video"></div>
                   <div className="content">
                     <h3>{item.title}</h3>
                     {(item.types.length > 0) && <div className="meta">
                       {item.types.map(type => (
-                        <span key={type} className="type">{type}</span>
+                        <span key={`${item._id}-${type}`} className="type">{type}</span>
                       ))}
                     </div>}
                   </div>
@@ -66,7 +66,7 @@ export default class ExerciseList extends Component {
             display: flex;
             align-items: center;
             padding: 8px;
-            background:rgba(255,255, 255, 0.7);
+            background:rgba(0, 0, 0, 0.05);
             margin: 8px 0;
             border-radius: 4px;
             color: ${colors.grays[86]};
@@ -74,8 +74,7 @@ export default class ExerciseList extends Component {
           }
 
           li.selected {
-            background: white;
-            //color: white;
+            background: ${colors.yellow};
           }
 
           .video {

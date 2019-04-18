@@ -5,7 +5,7 @@ import Router from 'next/router'
 import { LayoutWrap } from '../components/Layout'
 import DraggableList from '../components/DraggableList'
 import TimerSettings from '../components/TimerSettings'
-import { exercises } from '../data.json'
+// import { exercises } from '../data.json'
 import { colors } from '../theme';
 
 
@@ -53,7 +53,8 @@ class WorkoutPage extends Component {
 
   componentDidMount() {
     const selectedIds = ls.get('selectedExercises')
-    const selectedExercises = exercises.filter(x => selectedIds.includes(x.id))
+    const exercises = ls.get('allExercises')
+    const selectedExercises = exercises.filter(x => selectedIds.includes(x._id))
     this.setState({
       selectedExercises
     })
@@ -88,9 +89,6 @@ class WorkoutPage extends Component {
             align-items: center;
             justify-content: space-between;
             margin: 24px 0;
-          }
-          button {
-            background: ${colors.yellow};
           }
           .icon {
             width: 32px;

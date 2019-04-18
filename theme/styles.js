@@ -1,5 +1,5 @@
 import css from 'styled-jsx/css'
-import { colors } from '../theme'
+import { colors, bgColor, buttonBg, themeLight } from '../theme'
 
 export const globalStyles = css.global`
   @font-face {
@@ -34,8 +34,8 @@ export const globalStyles = css.global`
     font-style: normal;
   }
   body { 
-    background-color: ${colors.grays[86]};
-    color: white;
+    background-color: ${bgColor};
+    color: ${themeLight ? 'black' : 'white'};
     font-family: sofia_pro;
     font-size: 16px;
     box-sizing: border-box;
@@ -68,5 +68,7 @@ export const globalStyles = css.global`
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
+    color: ${themeLight ? 'white' : 'black'};
+    background: ${buttonBg};
   }
 `

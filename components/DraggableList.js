@@ -22,7 +22,7 @@ const getItemStyle = (isDragging, draggableStyle) => ({
   borderRadius: '4px',
   color: colors.grays[86],
   cursor: 'pointer',
-  background: isDragging ? 'rgba(255,255, 255, 0.7)' : 'white',
+  background: isDragging ? 'rgba(0, 0, 0, 0.15)' : 'rgba(0, 0, 0, 0.05)',
 
   // styles we need to apply on draggables
   ...draggableStyle,
@@ -72,7 +72,7 @@ class DraggableList extends Component {
               style={getListStyle(snapshot.isDraggingOver)}
             >
               {this.state.items.map((item, index) => (
-                <Draggable key={item.id} draggableId={item.id} index={index}>
+                <Draggable key={item._id} draggableId={item._id} index={index}>
                   {(provided, snapshot) => (
                     <div
                       ref={provided.innerRef}
